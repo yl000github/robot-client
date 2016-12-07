@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg">
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+		<div class="panel panel-default transparent1">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					基本操作
+				</h3>
+			</div>
+			<div class="panel-body">
+				<select id="task">
+  			<option value="cxbt-quotation-1">1.x车险白条报价填充</option>
+  			</select><br><br>
+  			<button id="run">执行</button>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script>
+// 重命名 Electron 提供的 require
+window.nodeRequire = require;
+delete window.require;
+delete window.exports;
+delete window.module;
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/basic.js"></script>
+<script type="text/javascript" src="js/jrobot.js"></script>
+</html>

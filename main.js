@@ -18,17 +18,19 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-	  width: 800, 
-	  height: 600
-//	  width: 360, 
-//	  height: 300, 
-//	  frame: false,
-//	  transparent:true,
-//	  alwaysOnTop:true
+//	  width: 800, 
+//	  height: 600
+	  x:1150,
+	  y:80,
+	  width: 240, 
+	  height: 150, 
+	  frame: false,
+	  transparent:true,
+	  alwaysOnTop:true
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
+  mainWindow.loadURL('file://' + __dirname + '/jrobot.html');
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {

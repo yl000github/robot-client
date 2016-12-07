@@ -26,8 +26,8 @@ $.ax=function (url,data,successFn,errorFn){
 	}
 	var success=function(res){
 		console.log("successfn:"+res);
-		var json=JSON.parse(res);
-		if(json.code){
+//		var json=JSON.parse(res);
+		if(json.errorCode){
 			successFn(json.data);
 		}else{
 			errorFn(json.msg);
@@ -36,11 +36,10 @@ $.ax=function (url,data,successFn,errorFn){
 	var jsonStr=JSON.stringify(data);
 	$.ajax({
 		url:url,
-		data:{
-			data:jsonStr
-		},
+		data:jsonStr,
+		contentType:"text/plain",
 //		contentType:"application/x-www-form-urlencoded;charset=UTF-8",
-		type:'get',		
+		type:'post',		
 		success:success,
 		error:function(){
 			$.alert("出错了！");
